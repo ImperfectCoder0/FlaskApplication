@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Today!</title>
+    <link rel="stylesheet" href="C:/Users/Owner/Desktop/Coding/HTML_Python_Combined_Framework/static/textures.css">
+</head>
+<body>
+    <p id="E"> I think we know where this is going</p>
+
+<script>
+
+    var pos = 0;
+
+    var interval = setInterval(loop, 1);
+    function loop (){
+        elem = document.getElementById("E");
+        pos++;
+        elem.style.left = pos + "px";
+        if (pos > 1400){
+
+            pos = 0;
+        }
+    }
+
+
+</script>
+</body>
+</html>

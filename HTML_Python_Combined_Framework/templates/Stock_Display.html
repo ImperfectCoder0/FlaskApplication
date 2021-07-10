@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STOCK</title>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/textures.css">
+</head>
+<body>
+    <div class="banner">
+
+        <img style="position: absolute; top: 0px; left: 0px" src="{{url_for('static', filename='BannerImg.png')}}" width="100%" height="200px">
+        <p  style="font-size: 400%; position: absolute; top:0px; left: 200px" >E-STOCK</p>
+    </div>
+    <p>Ticker: <input class="text_box" type="text" align="center" maxlength="10"  id="Ticker" placeholder="Type stock ticker here..."/></p>
+    <p id="updateable">Value of stock: {{ stock_val }}</p>
+    {% if signed_in %}
+    <p>Ticker: <input class="text_box" type="text" align="center" maxlength="10"  id="Ticker2" placeholder="Type stock ticker 2 here..." value=""/></p>
+    <p id="updateable2">Value of stock: {{ stock_val }}</p>
+    <p> Ticker: <input class="text_box" type="text" align="center" maxlength="10"  id="Ticker3" placeholder="Type stock ticker 3 here..." value=""/></p>
+    <p id="updateable3">Value of stock: {{ stock_val }}</p>
+    {% endif %}
+    <script src="{{url_for('static', filename='Stockinfo.js')}}">
+
+    </script>
+    <script>
+<!--        setInterval(function (){-->
+
+<!--            document.getElementById("img_stock").src = '../static/testsave.png'-->
+<!--        }, 10000)-->
+    </script>
+<!--    (233, 42, 123) -> Nice Pink-->
+<!--    (23, 42, 123) -> Dark Blue-->
+    <p id="hello"> Main Stock Data </p>
+    <img src="{{url_for('static', filename='testsave.png')}}" id="img_stock">
+</body>
+</html>

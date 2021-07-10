@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        .text_box {
+            height: 120%;
+            font-size: 12px;
+            font-family: times_new_roman;
+            color: rgb(233, 42, 123);
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <p style="text-align: center; font-size: 150%">Username: <input class="text_box" type="text" name="value" align="center" maxlength="65" autocomplete="Friend" id="Username"/></p>
+        <p style="text-align: center; font-size: 150%;">Password: <input class="text_box" type="password" name="pass" align="center"></p>
+        {% if invalid == True %}
+            <p style="color:red" id="invalid_stuff"> Invalid Password. Please Try Again.</p>
+            {{ invalid }}
+        {% endif %}
+        <p><input class="text_box" type="submit" value="Submit" style="color: blue; background-color: red"/></p>
+    </form>
+    <p id="name"></p>
+    <p id="name2"></p>
+    <p id="interesting"></p>
+    <script src="../static/Superstuff.js">
+    </script>
+</body>
+</html>
